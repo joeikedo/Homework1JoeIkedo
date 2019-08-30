@@ -1,26 +1,13 @@
 package edu.miracosta.cs113;
 
-/**
- * RandomClue.java : Your job is to ask your AssistantJack and get the correct
- * answer in <= 20 tries.  RandomClue is ONE solution to the problem,
- * where a set of random numbers is generated every attempt until all three
- * random numbers match the solution from the AssistantJack object.
- *
- * This is a sample solution, a driver using random number implementation.
- * You can use this file as a guide to create your own SEPARATE driver for
- * your implementation that can solve it in <= 20 times consistently.
- *
- * @author Nery Chapeton-Lamas (material from Kevin Lewis)
- * @version 1.0
- *
- */
+import model.AssistantJack;
+import model.Theory;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-import model.Theory;
-import model.AssistantJack;
 
-public class RandomClue {
+public class myClueSolver {
 
     /*
      * ALGORITHM:
@@ -64,11 +51,30 @@ public class RandomClue {
         // PROCESSING
         jack = new AssistantJack(answerSet);
 
+        ArrayList<Integer> wrongWeapons = new ArrayList();
+        ArrayList<Integer> wrongLocations = new ArrayList();
+        ArrayList<Integer> wrongPeople = new ArrayList();
+
         do {
             weapon = random.nextInt(6) + 1;
+            //Need to check to see if the random weapon we rolled up for this iteration is on our wrongWeapons list!!
+            //If so, we need to roll up a new weapon.//change lol
+
+
             location = random.nextInt(10) + 1;
-            murder = random.nextInt(6) + 1;
+            murder = random.nextInt(6) + 1;     //As in, 'the murderer'
             solution = jack.checkAnswer(weapon, location, murder);
+
+            if(solution == 1){
+                wrongWeapons.add(weapon);
+            }
+            else if (solution == 2){
+                wrongLocations.add(location);
+            }
+            else if(solution == 3){
+                wrongPeople.add(murder);
+            }
+
         } while (solution != 0);
 
         answer = new Theory(weapon, location, murder);
@@ -85,3 +91,4 @@ public class RandomClue {
     }
 
 }
+
