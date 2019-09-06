@@ -58,7 +58,7 @@ public class myClueSolver {
         do {
             weapon = random.nextInt(6) + 1;
             //Need to check to see if the random weapon we rolled up for this iteration is on our wrongWeapons list!!
-            //If so, we need to roll up a new weapon.//change lol
+            //If so, we need to roll up a new weapon.// change test
 
 
             location = random.nextInt(10) + 1;
