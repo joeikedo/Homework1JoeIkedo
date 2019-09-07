@@ -148,7 +148,7 @@ public class myClueSolver{
                     sum = wrongPeople.get(i) + sum;
                 }
                 murder = 21 - sum; //We subtract by 21 because 1+2+3+4+5+6 is 21, thus the difference must be
-                //the remeaining person
+                //the remeaining person.
             }
 
 
