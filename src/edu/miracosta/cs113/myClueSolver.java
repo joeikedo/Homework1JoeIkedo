@@ -95,7 +95,7 @@ public class myClueSolver{
                     sum = wrongWeapons.get(i) + sum;
                 }
                 weapon = 21 - sum; //We subtract by 21 because 1+2+3+4+5+6 is 21, thus the difference must be
-                //the remeaining weapon
+                //the remaining weapon
             }
 
             // Here we initialize the location number based off our wrongLocations array
