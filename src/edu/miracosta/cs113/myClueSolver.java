@@ -71,7 +71,7 @@ public class myClueSolver{
         ArrayList<Integer> wrongPeople = new ArrayList<Integer>();
 
         do {
-            // Here we initialize the weapon number based off our wrongWeapons array
+            // Here we initialize the weapon number to guess based off our wrongWeapons array
             if(wrongWeapons.size() == 0) {
                 weapon = random.nextInt(6) + 1;
             }
@@ -98,7 +98,7 @@ public class myClueSolver{
                 //the remaining weapon
             }
 
-            // Here we initialize the location number based off our wrongLocations array
+            // Here we initialize the location number to guess based off our wrongLocations array
             if(wrongLocations.size() == 0){
                 location = random.nextInt(10) + 1;
             }
@@ -125,7 +125,7 @@ public class myClueSolver{
                 // the difference must be the remaining location.
             }
 
-            // Here we initialize the person number based off our wrongPeople array
+            // Here we initialize the person number to guess based off our wrongPeople array
             if(wrongPeople.size() == 0){
                 murder = random.nextInt(6) + 1;
             }
@@ -154,7 +154,7 @@ public class myClueSolver{
 
             solution = jack.checkAnswer(weapon, location, murder);
 
-            //For adding to the arrays
+            //For adding incorrect numbers to the arrays
             if(solution == 1){
                 wrongWeapons.add(weapon);
             }
