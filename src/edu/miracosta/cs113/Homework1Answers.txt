@@ -1,0 +1,9 @@
+The solution I came up with very frequently got the correct answer in 4 guesses when testing theory 1, and almost always took 20 guesses when testing theory 2. 
+As for theory 3, there seemed to be no consistent pattern, but it usually took around 10-15. 
+
+The reason being that theory 1 takes very few guesses and theory 2 takes usually 20 is because I wrote the program to test numbers by incrementing by one
+provided that the next number is not among the list of known incorrect weapons/people/locations. This incrementing by one strategy is fairly easy to follow
+conceptually, however as we can see it does falter when guessing theory 2 since the highest numbers will take the longest amount of time to guess since
+the program increments by one each time. If I wanted to make the program so that testing theory 1 and theory 2 would take about the same number of guesses,
+I could make the program simply randomly guess numbers that aren't on the list of incorrect ones instead of incrementing by one. That being said, for testing
+theory 3 it shouldn't really make a difference which method I use. 
